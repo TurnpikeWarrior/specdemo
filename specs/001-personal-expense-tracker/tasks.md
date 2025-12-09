@@ -74,11 +74,11 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T012 [P] [US2] Implement `getExpenses` and `getDashboardStats` server actions in src/app/actions.ts
-- [ ] T013 [P] [US2] Create ExpenseList component in src/components/features/expenses/ExpenseList.tsx
-- [ ] T014 [P] [US2] Create DashboardStats component in src/components/features/expenses/DashboardStats.tsx
-- [ ] T015 [US2] Integrate ExpenseList and DashboardStats into src/app/page.tsx
-- [ ] T016 [US2] Implement date sorting logic (descending) in `getExpenses`
+- [x] T012 [P] [US2] Implement `getExpenses` and `getDashboardStats` server actions in src/app/actions.ts
+- [x] T013 [P] [US2] Create ExpenseList component in src/components/features/expenses/ExpenseList.tsx
+- [x] T014 [P] [US2] Create DashboardStats component in src/components/features/expenses/DashboardStats.tsx
+- [x] T015 [US2] Integrate ExpenseList and DashboardStats into src/app/page.tsx
+- [x] T016 [US2] Implement date sorting logic (descending) in `getExpenses`
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 

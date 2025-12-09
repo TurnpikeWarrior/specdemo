@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { v4 as uuidv4 } from 'uuid';
 import { readExpenses, writeExpenses } from '../server/db';
 import { Expense, ExpenseSchema } from '../lib/types';
+import { compareDesc, parseISO } from 'date-fns';
 
 export async function addExpense(formData: FormData): Promise<{ success: boolean; error?: string }> {
   try {
@@ -37,4 +38,16 @@ export async function addExpense(formData: FormData): Promise<{ success: boolean
     console.error('Failed to add expense:', error);
     return { success: false, error: 'Failed to add expense' };
   }
+}
+
+export async function getExpenses(): Promise<Expense[]> {
+  const expenses = await readExpenses();
+  // Sort by date descending
+  return expenses.sort((a, b) => compareDesc(parseISO(a.date), parseISO(b.date)));
+}
+
+export async function getDashboardStats(): Promise<{ totalAmount: number; count: number }> {
+  const expenses = await getExpenses();
+  const totalAmount = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+  return { totalAmount, count: expenses.length };
 }

@@ -1,18 +1,26 @@
 import { AddExpenseForm } from '@/components/features/expenses/AddExpenseForm';
+import { ExpenseList } from '@/components/features/expenses/ExpenseList';
+import { DashboardStats } from '@/components/features/expenses/DashboardStats';
+import { getExpenses, getDashboardStats } from '@/app/actions';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  const expenses = await getExpenses();
+  const stats = await getDashboardStats();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex flex-col gap-8">
-        <h1 className="text-4xl font-bold mb-8">Personal Expense Tracker</h1>
+    <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-gray-50/50">
+      <div className="z-10 w-full max-w-2xl items-center justify-between font-mono text-sm flex flex-col gap-8">
+        <h1 className="text-4xl font-bold mb-4 text-gray-900">Personal Expense Tracker</h1>
+        
+        <DashboardStats totalAmount={stats.totalAmount} count={stats.count} />
         
         <AddExpenseForm />
         
-        <div className="mt-12 w-full text-center text-gray-500">
-           {/* Placeholder for Dashboard and List */}
-           <p>Dashboard and Recent Expenses will appear here.</p>
-        </div>
+        <ExpenseList expenses={expenses} />
       </div>
     </main>
   );
 }
+
