@@ -43,12 +43,14 @@ export function AddExpenseForm() {
             step="0.01" 
             required 
             min="0.01"
+            aria-label="Amount"
           />
           <Input 
             name="date" 
             type="date" 
             label="Date" 
             required 
+            aria-label="Date"
           />
           <div className="flex flex-col gap-1.5">
             <label htmlFor="category" className="text-sm font-medium leading-none">Category</label>
@@ -57,6 +59,7 @@ export function AddExpenseForm() {
               name="category" 
               required
               className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+              aria-label="Category"
             >
               <option value="" disabled selected>Select a category</option>
               {Object.values(Category).map((cat) => (
@@ -68,12 +71,13 @@ export function AddExpenseForm() {
             name="description" 
             type="text" 
             label="Description (Optional)" 
-            placeholder="e.g., Lunch at cafe" 
+            placeholder="e.g., Lunch at cafe"
+            aria-label="Description" 
           />
           
-          {error && <div className="text-red-500 text-sm">{error}</div>}
+          {error && <div className="text-red-500 text-sm" role="alert" aria-live="polite">{error}</div>}
           
-          <Button type="submit" disabled={isLoading} className="w-full">
+          <Button type="submit" disabled={isLoading} className="w-full" aria-label="Add Expense">
             {isLoading ? 'Adding...' : 'Add Expense'}
           </Button>
         </form>

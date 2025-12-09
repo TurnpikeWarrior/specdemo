@@ -92,9 +92,9 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T017 [P] [US3] Implement `deleteExpense` server action in src/app/actions.ts
-- [ ] T018 [US3] Add delete button/action to ExpenseList items in src/components/features/expenses/ExpenseList.tsx
-- [ ] T019 [US3] Handle UI updates after deletion (revalidatePath)
+- [x] T017 [P] [US3] Implement `deleteExpense` server action in src/app/actions.ts
+- [x] T018 [US3] Add delete button/action to ExpenseList items in src/components/features/expenses/ExpenseList.tsx
+- [x] T019 [US3] Handle UI updates after deletion (revalidatePath)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -104,10 +104,10 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T020 [P] Ensure responsive design for mobile views
-- [ ] T021 [P] Verify accessibility (aria-labels on form inputs and buttons)
-- [ ] T022 Code cleanup and refactoring (remove unused imports/styles)
-- [ ] T023 Run verification against quickstart.md manual test steps
+- [x] T020 [P] Ensure responsive design for mobile views
+- [x] T021 [P] Verify accessibility (aria-labels on form inputs and buttons)
+- [x] T022 Code cleanup and refactoring (remove unused imports/styles)
+- [x] T023 Run verification against quickstart.md manual test steps
 
 ---
 

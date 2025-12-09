@@ -51,3 +51,21 @@ export async function getDashboardStats(): Promise<{ totalAmount: number; count:
   const totalAmount = expenses.reduce((sum, expense) => sum + expense.amount, 0);
   return { totalAmount, count: expenses.length };
 }
+
+export async function deleteExpense(id: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const expenses = await readExpenses();
+    const filteredExpenses = expenses.filter(expense => expense.id !== id);
+    
+    if (expenses.length === filteredExpenses.length) {
+       return { success: false, error: 'Expense not found' };
+    }
+
+    await writeExpenses(filteredExpenses);
+    revalidatePath('/');
+    return { success: true };
+  } catch (error) {
+    console.error('Failed to delete expense:', error);
+    return { success: false, error: 'Failed to delete expense' };
+  }
+}

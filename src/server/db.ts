@@ -20,7 +20,7 @@ export async function readExpenses(): Promise<Expense[]> {
 export async function writeExpenses(expenses: Expense[]): Promise<void> {
   try {
     await fs.writeFile(DATA_FILE_PATH, JSON.stringify(expenses, null, 2), 'utf-8');
-  } catch (error) {
+  } catch {
     throw new Error('Failed to write expenses data');
   }
 }
