@@ -28,10 +28,10 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create auth configuration directory structure (src/app/api/auth/[...nextauth], src/lib)
-- [ ] T002 [P] Install next-auth@beta and lucide-react dependencies
-- [ ] T003 Create .env.local template with AUTH_GITHUB_ID, AUTH_GITHUB_SECRET, AUTH_SECRET placeholders
-- [ ] T004 Implement NextAuth configuration in src/lib/auth.ts with GitHub provider
+- [x] T001 Create auth configuration directory structure (src/app/api/auth/[...nextauth], src/lib)
+- [x] T002 [P] Install next-auth@beta and lucide-react dependencies
+- [x] T003 Create .env.local template with AUTH_GITHUB_ID, AUTH_GITHUB_SECRET, AUTH_SECRET placeholders
+- [x] T004 Implement NextAuth configuration in src/lib/auth.ts with GitHub provider
 
 ---
 
@@ -41,10 +41,10 @@ description: "Task list template for feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Implement API route handler for Auth.js in src/app/api/auth/[...nextauth]/route.ts
-- [ ] T006 [P] Create reusable LoginButton component in src/components/features/auth/LoginButton.tsx
-- [ ] T007 [P] Create reusable LogoutButton component in src/components/features/auth/LogoutButton.tsx
-- [ ] T008 [P] Create UserProfile component in src/components/features/auth/UserProfile.tsx to display session info
+- [x] T005 Implement API route handler for Auth.js in src/app/api/auth/[...nextauth]/route.ts
+- [x] T006 [P] Create reusable LoginButton component in src/components/features/auth/LoginButton.tsx
+- [x] T007 [P] Create reusable LogoutButton component in src/components/features/auth/LogoutButton.tsx
+- [x] T008 [P] Create UserProfile component in src/components/features/auth/UserProfile.tsx to display session info
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -58,9 +58,9 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Integrate LoginButton into src/app/page.tsx (conditionally rendered if no session)
-- [ ] T010 [US1] Integrate UserProfile into src/app/page.tsx (conditionally rendered if session exists)
-- [ ] T011 [US1] Verify session retrieval in Server Components using `auth()` from src/lib/auth.ts
+- [x] T009 [US1] Integrate LoginButton into src/app/page.tsx (conditionally rendered if no session)
+- [x] T010 [US1] Integrate UserProfile into src/app/page.tsx (conditionally rendered if session exists)
+- [x] T011 [US1] Verify session retrieval in Server Components using `auth()` from src/lib/auth.ts
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -74,8 +74,8 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T012 [US2] Integrate LogoutButton into src/app/page.tsx or UserProfile component
-- [ ] T013 [US2] Ensure LogoutButton calls `signOut()` server action or client method
+- [x] T012 [US2] Integrate LogoutButton into src/app/page.tsx or UserProfile component
+- [x] T013 [US2] Ensure LogoutButton calls `signOut()` server action or client method
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -89,8 +89,8 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T014 [US3] Verify JWT strategy configuration in src/lib/auth.ts (default behavior, explicit check)
-- [ ] T015 [US3] (Optional) Add middleware.ts if route protection is needed (not strictly required by spec but good practice)
+- [x] T014 [US3] Verify JWT strategy configuration in src/lib/auth.ts (default behavior, explicit check)
+- [x] T015 [US3] (Optional) Add middleware.ts if route protection is needed (not strictly required by spec but good practice)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -100,10 +100,10 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T016 [P] Add error handling page for auth failures (src/app/auth/error/page.tsx)
-- [ ] T017 [P] Polish UI for Login/Logout buttons using Tailwind CSS (match existing design)
-- [ ] T018 Code cleanup (remove unused imports)
-- [ ] T019 Run verification against quickstart.md manual test steps
+- [x] T016 [P] Add error handling page for auth failures (src/app/auth/error/page.tsx)
+- [x] T017 [P] Polish UI for Login/Logout buttons using Tailwind CSS (match existing design)
+- [x] T018 Code cleanup (remove unused imports)
+- [x] T019 Run verification against quickstart.md manual test steps
 
 ---
 
