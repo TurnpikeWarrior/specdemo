@@ -28,9 +28,9 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project directories per plan in src/app, src/components, src/server, src/lib, src/data
-- [ ] T002 Initialize empty expenses.json file in src/data/expenses.json
-- [ ] T003 [P] Install dependencies (zod, date-fns, tailwindcss) if not present
+- [x] T001 Create project directories per plan in src/app, src/components, src/server, src/lib, src/data
+- [x] T002 Initialize empty expenses.json file in src/data/expenses.json
+- [x] T003 [P] Install dependencies (zod, date-fns, tailwindcss) if not present
 
 ---
 
@@ -40,10 +40,10 @@ description: "Task list template for feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Create shared types in src/lib/types.ts (Expense interface, Category enum)
-- [ ] T005 [P] Create validation schema in src/lib/types.ts (ExpenseSchema with Zod)
-- [ ] T006 Implement db layer in src/server/db.ts (read/write logic for expenses.json)
-- [ ] T007 [P] Create reusable UI components in src/components/ui/ (Button, Input, Card)
+- [x] T004 Create shared types in src/lib/types.ts (Expense interface, Category enum)
+- [x] T005 [P] Create validation schema in src/lib/types.ts (ExpenseSchema with Zod)
+- [x] T006 Implement db layer in src/server/db.ts (read/write logic for expenses.json)
+- [x] T007 [P] Create reusable UI components in src/components/ui/ (Button, Input, Card)
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -57,10 +57,10 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T008 [P] [US1] Implement `addExpense` server action in src/app/actions.ts
-- [ ] T009 [P] [US1] Create AddExpenseForm component in src/components/features/expenses/AddExpenseForm.tsx
-- [ ] T010 [US1] Integrate AddExpenseForm into src/app/page.tsx
-- [ ] T011 [US1] Add error handling and loading states to AddExpenseForm
+- [x] T008 [P] [US1] Implement `addExpense` server action in src/app/actions.ts
+- [x] T009 [P] [US1] Create AddExpenseForm component in src/components/features/expenses/AddExpenseForm.tsx
+- [x] T010 [US1] Integrate AddExpenseForm into src/app/page.tsx
+- [x] T011 [US1] Add error handling and loading states to AddExpenseForm
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
